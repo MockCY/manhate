@@ -1,0 +1,27 @@
+name: Deploy static website
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload files to server
+        uses: easingthemes/ssh-deploy@v5.1.0
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          REMOTE_PORT: ${{ secrets.REMOTE_PORT || 22 }}
+          SOURCE: "./"
+          TARGET: ${{ secrets.REMOTE_TARGET }}
+          ARGS: "-rlgoDzvc --delete"
+          EXCLUDE: "/.git/, /.github/, /.edge-profile/, /.edge-profile-products/, /preview-*.png, /*.pdf"

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>品质服务 - MANHART</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260424-service">
+  <style>
+    .service-page { display: grid; gap: 34px; }
+    .service-hero {
+      display: grid;
+      grid-template-columns: minmax(420px, 0.92fr) minmax(560px, 1.08fr);
+      gap: 34px;
+      align-items: stretch;
+    }
+    .service-hero__copy {
+      position: relative;
+      min-height: 640px;
+      padding: 70px 60px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: radial-gradient(circle at 22% 12%, rgba(230,190,134,.12), transparent 30%), #090e16;
+    }
+    .service-hero__copy::before {
+      content: "";
+      position: absolute;
+      left: 60px;
+      top: 70px;
+      width: 92px;
+      height: 1px;
+      background: rgba(230,190,134,.72);
+    }
+    .service-hero h1 {
+      display: grid;
+      gap: 14px;
+      margin: 76px 0 24px;
+      color: #fffaf0;
+      font-family: "Noto Serif SC", serif;
+      font-size: clamp(3rem, 4.6vw, 5.4rem);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: .03em;
+    }
+    .service-hero h1 span:first-child {
+      color: rgba(255,250,240,.74);
+      font-size: .62em;
+      letter-spacing: .12em;
+    }
+    .service-hero__copy p {
+      max-width: 660px;
+      margin: 0;
+      color: rgba(246,240,230,.76);
+      font-size: 1.02rem;
+      line-height: 1.95;
+    }
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 36px;
+    }
+    .service-tags span {
+      padding: 9px 14px;
+      border: 1px solid rgba(230,190,134,.28);
+      color: rgba(255,243,223,.86);
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .service-panel {
+      display: grid;
+      grid-template-columns: 1fr 240px;
+      grid-template-rows: 1fr auto;
+      gap: 18px;
+      min-height: 640px;
+    }
+    .service-panel__image,
+    .service-panel__score,
+    .service-panel__chart,
+    .service-panel__stats article,
+    .service-flow article,
+    .service-matrix article,
+    .service-standard,
+    .service-contact {
+      border: 1px solid rgba(255,255,255,.08);
+      background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.018)), #10141b;
+    }
+    .service-panel__image {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(7,9,13,.04), rgba(7,9,13,.36)), url("assets/featured-luxury-04.png") center/cover no-repeat;
+    }
+    .service-panel__image::after {
+      content: "SERVICE";
+      position: absolute;
+      left: 30px;
+      bottom: 28px;
+      color: rgba(255,250,240,.9);
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(3rem, 6vw, 6rem);
+      letter-spacing: .12em;
+    }
+    .service-panel__score {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 28px 26px;
+      background: linear-gradient(160deg, rgba(230,190,134,.16), rgba(255,255,255,.02)), #15171d;
+    }
+    .service-panel__score strong {
+      color: #fffaf0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 5rem;
+      line-height: .9;
+    }
+    .service-panel__score span,
+    .service-panel__chart span,
+    .service-standard span {
+      color: #f3c486;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .service-panel__score p {
+      margin: 14px 0 0;
+      color: rgba(246,240,230,.74);
+      line-height: 1.85;
+    }
+    .service-panel__chart {
+      grid-column: 1 / -1;
+      padding: 28px;
+    }
+    .service-panel__stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .service-panel__stats article { padding: 22px; }
+    .service-panel__stats strong {
+      display: block;
+      color: #fffaf0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 3rem;
+      line-height: 1;
+    }
+    .service-panel__stats small {
+      display: block;
+      margin-top: 10px;
+      color: rgba(246,240,230,.76);
+      font-size: .9rem;
+      line-height: 1.6;
+    }
+    .service-section-title {
+      display: grid;
+      grid-template-columns: minmax(360px, 480px) 1fr;
+      gap: 34px;
+      align-items: end;
+    }
+    .service-section-title h2 {
+      margin: 0;
+      color: #fffaf0;
+      font-family: "Noto Serif SC", serif;
+      font-size: clamp(2rem, 2.65vw, 3rem);
+      line-height: 1.35;
+      letter-spacing: .04em;
+    }
+    .service-section-title p:last-child {
+      max-width: 760px;
+      margin: 0;
+      color: rgba(246,240,230,.72);
+      line-height: 1.9;
+    }
+    .service-flow {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .service-flow::before {
+      content: "";
+      position: absolute;
+      left: 42px;
+      right: 42px;
+      top: 42px;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(230,190,134,.76), rgba(230,190,134,.12));
+    }
+    .service-flow article {
+      position: relative;
+      min-height: 240px;
+      padding: 28px 22px 24px;
+    }
+    .service-flow b {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(230,190,134,.64);
+      background: #10141b;
+      color: #f3c486;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.25rem;
+    }
+    .service-flow h3,
+    .service-matrix h3,
+    .service-contact h3 {
+      margin: 0 0 12px;
+      color: #fffaf0;
+      font-family: "Noto Serif SC", serif;
+      font-size: 1.35rem;
+    }
+    .service-flow p,
+    .service-matrix p,
+    .service-standard p,
+    .service-contact p,
+    .service-checklist li {
+      margin: 0;
+      color: rgba(246,240,230,.72);
+      line-height: 1.85;
+    }
+    .service-matrix {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr 1fr;
+      gap: 18px;
+    }
+    .service-matrix article {
+      min-height: 300px;
+      padding: 30px;
+    }
+    .service-matrix article:first-child {
+      background: linear-gradient(180deg, rgba(7,9,13,.08), rgba(7,9,13,.38)), url("assets/recommend-02.png") center/cover no-repeat;
+    }
+    .service-matrix article:first-child h3,
+    .service-matrix article:first-child p {
+      text-shadow: 0 2px 14px rgba(0,0,0,.68);
+    }
+    .service-ring {
+      width: 140px;
+      height: 140px;
+      margin-bottom: 24px;
+      border-radius: 50%;
+      background: conic-gradient(#e6be86 0 78%, rgba(255,255,255,.08) 78% 100%);
+      display: grid;
+      place-items: center;
+    }
+    .service-ring span {
+      display: grid;
+      place-items: center;
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      background: #10141b;
+      color: #fffaf0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2.2rem;
+    }
+    .service-bars { display: grid; gap: 18px; margin-top: 24px; }
+    .service-bar { display: grid; grid-template-columns: 88px 1fr 42px; gap: 12px; align-items: center; }
+    .service-bar span, .service-bar b { color: rgba(255,243,223,.84); font-size: .9rem; }
+    .service-bar b { text-align: right; font-family: "Cormorant Garamond", serif; font-size: 1.1rem; }
+    .service-bar div { height: 9px; background: rgba(255,255,255,.08); overflow: hidden; }
+    .service-bar i { display: block; height: 100%; background: linear-gradient(90deg, #80613d, #e6be86); }
+    .service-standard {
+      display: grid;
+      grid-template-columns: minmax(280px, .8fr) 1.2fr;
+      gap: 34px;
+      padding: 34px;
+    }
+    .service-checklist { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+    .service-checklist li {
+      position: relative;
+      padding: 16px 18px 16px 42px;
+      background: rgba(255,255,255,.03);
+    }
+    .service-checklist li::before {
+      content: "";
+      position: absolute;
+      left: 18px;
+      top: 24px;
+      width: 8px;
+      height: 8px;
+      border: 1px solid rgba(230,190,134,.8);
+      transform: rotate(45deg);
+    }
+    .service-contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+      padding: 34px;
+      background: linear-gradient(120deg, rgba(230,190,134,.1), transparent 34%), #0d1118;
+    }
+    .service-contact__meta { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+    .service-contact__meta div { padding: 18px; background: rgba(255,255,255,.035); border-left: 1px solid rgba(230,190,134,.46); }
+    .service-contact__meta strong { display: block; margin-bottom: 8px; color: #fffaf0; }
+    .service-contact__meta span { color: rgba(246,240,230,.72); line-height: 1.7; }
+    @media (max-width: 1180px) {
+      .service-hero, .service-panel, .service-section-title, .service-standard, .service-contact { grid-template-columns: 1fr; }
+      .service-hero__copy, .service-panel { min-height: 0; }
+      .service-panel__image { min-height: 420px; }
+      .service-flow { grid-template-columns: repeat(3, minmax(0,1fr)); }
+      .service-matrix { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .service-hero__copy { padding: 28px 22px; }
+      .service-hero__copy::before { left: 22px; top: 28px; }
+      .service-hero h1 { margin-top: 62px; font-size: clamp(2.5rem, 12vw, 4.1rem); }
+      .service-panel__stats, .service-flow, .service-contact__meta, .service-bar { grid-template-columns: 1fr; }
+      .service-flow::before { display: none; }
+      .service-panel__image { min-height: 320px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand-block" href="index.html" aria-label="MANHART 首页">
+      <span class="brand-mark">M</span>
+      <span class="brand-copy">
+        <span class="brand-cn">曼哈特</span>
+        <span class="brand-en">MANHART</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a class="nav-link" href="index.html">首页</a>
+      <a class="nav-link" href="products.html">产品中心</a>
+      <a class="nav-link is-active" href="service.html">品质服务</a>
+      <a class="nav-link" href="featured.html">新品爆款</a>
+      <a class="nav-link" href="about.html">关于我们</a>
+      <a class="nav-link" href="news.html">企业动态</a>
+      <a class="nav-link nav-link--accent" href="store.html">网上商城</a>
+    </nav>
+  </header>
+
+  <main class="page-shell service-page">
+    <section class="service-hero">
+      <div class="service-hero__copy">
+        <p class="eyebrow">Quality Service</p>
+        <h1><span>从选型到交付</span><span>把门庭质感落到每个节点。</span></h1>
+        <p>MANHART 的服务不是简单售前售后，而是围绕门型选择、尺寸深化、工艺确认、安装交付与长期维护建立完整服务路径，让高端门庭从方案到落地都保持一致。</p>
+        <div class="service-tags">
+          <span>Design Match</span>
+          <span>Delivery Control</span>
+          <span>Aftercare</span>
+        </div>
+      </div>
+      <div class="service-panel">
+        <article class="service-panel__image"></article>
+        <article class="service-panel__score">
+          <div>
+            <strong>6</strong>
+            <span>Core Steps</span>
+          </div>
+          <p>从需求沟通到售后维护，形成可追踪的服务闭环。</p>
+        </article>
+        <article class="service-panel__chart">
+          <span>Service Dashboard</span>
+          <div class="service-panel__stats">
+            <article><strong>1:1</strong><small>专属顾问全程跟进</small></article>
+            <article><strong>72h</strong><small>方案初步反馈周期</small></article>
+            <article><strong>6项</strong><small>交付校验关键节点</small></article>
+            <article><strong>365d</strong><small>售后使用跟踪建议</small></article>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="service-section-title">
+      <div>
+        <p class="eyebrow">Service Flow</p>
+        <h2>服务流程可视化</h2>
+      </div>
+      <p>把复杂的定制服务拆成清晰步骤，让客户知道每一步发生什么、输出什么，也让项目沟通更有秩序。</p>
+    </section>
+    <section class="service-flow">
+      <article><b>01</b><h3>需求沟通</h3><p>确认建筑场景、风格偏好、预算区间与功能需求。</p></article>
+      <article><b>02</b><h3>方案匹配</h3><p>结合系列、门型、材质和五金给出选型建议。</p></article>
+      <article><b>03</b><h3>深化复核</h3><p>复核尺寸、开启方式、门洞条件与收口关系。</p></article>
+      <article><b>04</b><h3>工艺确认</h3><p>确认色板、纹理、把手、锁具与表面效果。</p></article>
+      <article><b>05</b><h3>安装验收</h3><p>校准门体状态、闭合手感、缝隙控制与五金联动。</p></article>
+      <article><b>06</b><h3>售后维护</h3><p>提供保养建议、使用说明与后续维护支持。</p></article>
+    </section>
+
+    <section class="service-section-title">
+      <div>
+        <p class="eyebrow">Service System</p>
+        <h2>服务体系不只靠承诺，也靠过程管理。</h2>
+      </div>
+      <p>通过质量占比、交付指标和场景化服务模块，让品质服务从抽象描述变成可感知的标准。</p>
+    </section>
+    <section class="service-matrix">
+      <article>
+        <h3>高端项目适配</h3>
+        <p>针对别墅府邸、城市大平层、会所空间与样板项目，建立更完整的选型与落地标准。</p>
+      </article>
+      <article>
+        <div class="service-ring"><span>78%</span></div>
+        <h3>交付控制占比</h3>
+        <p>重点投入在尺寸复核、工艺确认、安装校准与交付验收，减少方案和落地之间的偏差。</p>
+      </article>
+      <article>
+        <h3>品质关注图表</h3>
+        <div class="service-bars">
+          <div class="service-bar"><span>尺寸复核</span><div><i style="width: 92%"></i></div><b>92%</b></div>
+          <div class="service-bar"><span>工艺确认</span><div><i style="width: 86%"></i></div><b>86%</b></div>
+          <div class="service-bar"><span>安装调试</span><div><i style="width: 80%"></i></div><b>80%</b></div>
+          <div class="service-bar"><span>售后维护</span><div><i style="width: 68%"></i></div><b>68%</b></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="service-standard">
+      <div>
+        <span>Delivery Standard</span>
+        <h2>交付标准</h2>
+        <p>每个节点都对应明确输出，让客户、设计方和安装方在同一套标准里协作。</p>
+      </div>
+      <ul class="service-checklist">
+        <li>前期收集门洞信息、建筑风格、使用需求与预算区间，输出选型方向。</li>
+        <li>方案阶段细化颜色、纹理、五金、锁具和开启方式，输出确认清单。</li>
+        <li>生产阶段跟进工艺执行与节点反馈，关注表面效果和结构稳定性。</li>
+        <li>安装交付阶段完成调试、验收与使用讲解，确保整体观感和手感一致。</li>
+      </ul>
+    </section>
+
+    <section class="service-contact">
+      <div>
+        <p class="eyebrow">Consultation</p>
+        <h3>预约专属服务顾问</h3>
+        <p>无论是自宅入户门升级、整栋项目配套，还是样板空间深化，都可以先从需求沟通开始。我们会根据建筑场景与产品方向安排专属对接。</p>
+      </div>
+      <div class="service-contact__meta">
+        <div><strong>服务对象</strong><span>别墅府邸 / 高端住宅 / 会所空间 / 项目配套</span></div>
+        <div><strong>沟通内容</strong><span>门型选配 / 工艺建议 / 安装交付 / 售后咨询</span></div>
+        <div><strong>响应方式</strong><span>线上初沟通 + 线下复核建议</span></div>
+        <div><strong>项目支持</strong><span>重点项目可进行专项跟进</span></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

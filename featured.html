@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新品爆款 - MANHART</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260423-21">
+  <style>
+    .featured-page { display: grid; gap: 36px; }
+    .featured-page .page-hero {
+      min-height: 620px;
+      padding: 78px 56px 54px;
+      background:
+        linear-gradient(90deg, rgba(6, 9, 15, 0.96) 0%, rgba(6, 9, 15, 0.8) 34%, rgba(6, 9, 15, 0.38) 68%, rgba(6, 9, 15, 0.2) 100%),
+        linear-gradient(180deg, rgba(10, 13, 18, 0.1), rgba(10, 13, 18, 0.5)),
+        url("assets/featured-luxury-hero.png") center/cover no-repeat;
+    }
+    .featured-page .page-hero::before {
+      top: 54px;
+      right: 54px;
+      width: min(540px, 40vw);
+      height: 270px;
+    }
+    .featured-page .page-hero::after {
+      right: 92px;
+      bottom: 48px;
+      width: 280px;
+    }
+    .featured-hero__lead {
+      max-width: 620px;
+      margin-top: 22px;
+      color: #f3c486;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+    .featured-hero__stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 980px;
+      margin-top: 36px;
+    }
+    .featured-stat {
+      padding: 20px 22px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: linear-gradient(180deg, rgba(9, 12, 18, 0.42), rgba(9, 12, 18, 0.68));
+      backdrop-filter: blur(8px);
+    }
+    .featured-stat strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #fffaf0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      letter-spacing: 0.04em;
+    }
+    .featured-stat span { color: rgba(246, 240, 230, 0.72); line-height: 1.8; }
+    .featured-showcase-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+    .featured-main-card,
+    .featured-side-stack article,
+    .featured-scene,
+    .featured-rank,
+    .featured-note-card,
+    .featured-material-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .featured-main-card {
+      min-height: 620px;
+      padding: 28px;
+      display: flex;
+      align-items: flex-end;
+      background:
+        linear-gradient(180deg, rgba(7, 9, 13, 0.03), rgba(7, 9, 13, 0.34) 72%, rgba(7, 9, 13, 0.7)),
+        url("assets/featured-luxury-01.png") center/cover no-repeat;
+    }
+    .featured-main-card__content {
+      width: min(350px, 100%);
+      padding: 14px 16px;
+      background: linear-gradient(90deg, rgba(9, 12, 18, 0.78), rgba(9, 12, 18, 0.5));
+      backdrop-filter: blur(4px);
+      border-left: 2px solid rgba(230, 190, 134, 0.72);
+    }
+    .featured-main-card h3,
+    .featured-side-stack h3,
+    .featured-scene h3,
+    .featured-note-card h3,
+    .featured-material-card h3 {
+      margin: 0 0 10px;
+      font-family: "Noto Serif SC", serif;
+      font-size: 2rem;
+      color: #fffaf0;
+    }
+    .featured-kicker {
+      margin: 0 0 10px;
+      color: #f0bf78;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
+    .featured-main-card p,
+    .featured-side-stack p,
+    .featured-scene p,
+    .featured-note-card p,
+    .featured-material-card p,
+    .featured-rank p,
+    .featured-rank li {
+      color: rgba(246, 240, 230, 0.76);
+      line-height: 1.9;
+    }
+    .featured-side-stack {
+      display: grid;
+      gap: 24px;
+    }
+    .featured-side-stack article {
+      min-height: 298px;
+      padding: 22px;
+      display: flex;
+      align-items: end;
+      justify-content: flex-end;
+      background-position: center;
+      background-size: cover;
+    }
+    .featured-side-stack article:first-child {
+      background:
+        linear-gradient(180deg, rgba(7, 9, 13, 0.04), rgba(7, 9, 13, 0.48)),
+        url("assets/featured-luxury-02.png") center/cover no-repeat;
+    }
+    .featured-side-stack article:last-child {
+      background:
+        linear-gradient(180deg, rgba(7, 9, 13, 0.04), rgba(7, 9, 13, 0.44)),
+        url("assets/featured-luxury-03.png") center/cover no-repeat;
+    }
+    .featured-side-stack__content {
+      width: min(255px, 100%);
+      padding: 12px 14px;
+      background: rgba(9, 12, 18, 0.58);
+      backdrop-filter: blur(4px);
+      border-left: 2px solid rgba(230, 190, 134, 0.62);
+    }
+    .featured-main-card__content h3,
+    .featured-side-stack__content h3 {
+      margin-bottom: 8px;
+      font-size: 1.65rem;
+    }
+    .featured-main-card__content p:last-child,
+    .featured-side-stack__content p:last-child {
+      margin-bottom: 0;
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+    .featured-side-stack__content p:last-child {
+      -webkit-line-clamp: 2;
+    }
+    .featured-rank {
+      padding: 28px 30px;
+    }
+    .featured-rank__list {
+      display: grid;
+      gap: 14px;
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .featured-rank__item {
+      display: grid;
+      grid-template-columns: 54px 1fr auto;
+      gap: 16px;
+      align-items: center;
+      padding: 16px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .featured-rank__item:first-child { border-top: 0; padding-top: 0; }
+    .featured-rank__index {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      border: 1px solid rgba(230, 190, 134, 0.4);
+      color: #f3c486;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.6rem;
+    }
+    .featured-rank__tag {
+      color: #fff3df;
+      font-size: 0.9rem;
+      letter-spacing: 0.14em;
+    }
+    .featured-scene-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .featured-scene {
+      min-height: 440px;
+      padding: 30px;
+      display: flex;
+      align-items: end;
+      background:
+        linear-gradient(180deg, rgba(7, 9, 13, 0.08), rgba(7, 9, 13, 0.58)),
+        url("assets/featured-luxury-04.png") center/cover no-repeat;
+    }
+    .featured-scene--light {
+      background:
+        linear-gradient(180deg, rgba(7, 9, 13, 0.05), rgba(7, 9, 13, 0.5)),
+        url("assets/featured-luxury-05.png") center/cover no-repeat;
+    }
+    .featured-scene__content {
+      width: min(420px, 100%);
+      padding: 20px 22px;
+      background: rgba(9, 12, 18, 0.58);
+      backdrop-filter: blur(8px);
+    }
+    .featured-note-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+    }
+    .featured-note-card,
+    .featured-material-card {
+      padding: 30px;
+    }
+    .featured-point-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .featured-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .featured-feature-card {
+      min-height: 128px;
+      padding: 18px;
+      border: 1px solid rgba(230, 190, 134, 0.18);
+      background: linear-gradient(180deg, rgba(230, 190, 134, 0.08), rgba(255, 255, 255, 0.03));
+    }
+    .featured-feature-card span {
+      display: block;
+      margin-bottom: 10px;
+      color: #f0bf78;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.45rem;
+      letter-spacing: 0.06em;
+    }
+    .featured-feature-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #fffaf0;
+      font-size: 1rem;
+    }
+    .featured-feature-card p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+    .featured-point {
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .featured-point strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #fff3df;
+      font-size: 1rem;
+    }
+    .featured-material-swatches {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .featured-material-swatches div {
+      min-height: 110px;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      color: #fffaf0;
+      font-size: 0.88rem;
+      letter-spacing: 0.06em;
+    }
+    .featured-material-swatches div:nth-child(1) { background: linear-gradient(135deg, #2d231d, #6d5448); }
+    .featured-material-swatches div:nth-child(2) { background: linear-gradient(135deg, #b9aa90, #efe3ca); color: #261f18; }
+    .featured-material-swatches div:nth-child(3) { background: linear-gradient(135deg, #121418, #4f545c); }
+    .featured-material-swatches div:nth-child(4) { background: linear-gradient(135deg, #19120f, #9b714b); }
+    .featured-material-swatches div:nth-child(5) { background: linear-gradient(135deg, #29221e, #c29b66); }
+    .featured-material-swatches div:nth-child(6) { background: linear-gradient(135deg, #0f1114, #252a32 48%, #b68a52); }
+    @media (max-width: 1180px) {
+      .featured-hero__stats,
+      .featured-showcase-grid,
+      .featured-scene-grid,
+      .featured-note-grid,
+      .featured-feature-grid { grid-template-columns: 1fr 1fr; }
+      .featured-showcase-grid > *:first-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 720px) {
+      .featured-page .page-hero { min-height: 560px; padding: 48px 24px 34px; }
+      .featured-hero__stats,
+      .featured-showcase-grid,
+      .featured-scene-grid,
+      .featured-note-grid,
+      .featured-feature-grid,
+      .featured-material-swatches { grid-template-columns: 1fr; }
+      .featured-main-card,
+      .featured-side-stack article,
+      .featured-scene { min-height: 360px; }
+      .featured-rank__item { grid-template-columns: 44px 1fr; }
+      .featured-rank__tag { grid-column: 2; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand-block" href="index.html" aria-label="MANHART 首页">
+      <span class="brand-mark">M</span>
+      <span class="brand-copy">
+        <span class="brand-cn">曼哈特</span>
+        <span class="brand-en">MANHART</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a class="nav-link" href="index.html">首页</a>
+      <a class="nav-link" href="products.html">产品中心</a>
+      <a class="nav-link" href="service.html">品质服务</a>
+      <a class="nav-link is-active" href="featured.html">新品爆款</a>
+      <a class="nav-link" href="about.html">关于我们</a>
+      <a class="nav-link" href="news.html">企业动态</a>
+      <a class="nav-link nav-link--accent" href="store.html">网上商城</a>
+    </nav>
+  </header>
+
+  <main class="page-shell featured-page">
+    <section class="page-hero">
+      <p class="eyebrow">Featured Collection</p>
+      <h1>新品爆款</h1>
+      <p class="featured-hero__lead">以更强的立面辨识度、材质张力和入户仪式感，集中呈现 MANHART 当前最具记忆点的门庭作品。</p>
+      <p>从暗色金属感到浅色艺术纹理，这一页不是简单罗列产品，而是把真正能撑住高端住宅气质的热门门型集中放在一起，方便快速对比和选配。</p>
+      <div class="featured-hero__stats">
+        <div class="featured-stat"><strong>05</strong><span>主推爆款系列，覆盖深色、浅色、艺术肌理、黑钛线条与古铜织面方向。</span></div>
+        <div class="featured-stat"><strong>Top</strong><span>优先展示高辨识度门型，适合首页导流后的重点浏览。</span></div>
+        <div class="featured-stat"><strong>Scene</strong><span>同时呈现夜景府邸与日景立面两种落地氛围。</span></div>
+        <div class="featured-stat"><strong>Match</strong><span>可继续衔接产品中心做门型、材质与服务方式的细化选择。</span></div>
+      </div>
+    </section>
+
+    <section class="featured-showcase-grid">
+      <article class="featured-main-card">
+        <div class="featured-main-card__content">
+          <p class="featured-kicker">Featured No.01</p>
+          <h3>曜影一号</h3>
+          <p>石墨黑门体配香槟铜线，竖向肌理和五金细节更突出。</p>
+        </div>
+      </article>
+      <div class="featured-side-stack">
+        <article>
+          <div class="featured-side-stack__content">
+            <p class="featured-kicker">Art Texture</p>
+            <h3>流纹系列</h3>
+            <p>波纹面板做主视觉，近景纹理更强。</p>
+          </div>
+        </article>
+        <article>
+          <div class="featured-side-stack__content">
+            <p class="featured-kicker">Light Facade</p>
+            <h3>云曜白境</h3>
+            <p>浅色门体配香槟细边，气质更轻、更干净。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="page-section__heading">
+        <p class="eyebrow">Hot Ranking</p>
+        <h2>爆款榜单</h2>
+      </div>
+      <div class="featured-rank">
+        <p>按照视觉记忆点、适配场景和落地完成度，当前优先推荐以下几款作为页面主推门型。</p>
+        <div class="featured-rank__list">
+          <div class="featured-rank__item">
+            <div class="featured-rank__index">01</div>
+            <div>
+              <strong>曜影一号</strong>
+              <p>深色极简、竖向节奏、金属质感强，适合高端别墅主入户。</p>
+            </div>
+            <span class="featured-rank__tag">深色府邸</span>
+          </div>
+          <div class="featured-rank__item">
+            <div class="featured-rank__index">02</div>
+            <div>
+              <strong>流纹系列</strong>
+              <p>艺术肌理更强，远看有雕塑感，近看有工艺张力，适合高识别立面。</p>
+            </div>
+            <span class="featured-rank__tag">艺术门面</span>
+          </div>
+          <div class="featured-rank__item">
+            <div class="featured-rank__index">03</div>
+            <div>
+              <strong>云曜白境</strong>
+              <p>浅色立面更轻盈，适合大平层入户、庭院白墙与极简现代外观。</p>
+            </div>
+            <span class="featured-rank__tag">浅色立面</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-scene-grid">
+      <article class="featured-scene">
+        <div class="featured-scene__content">
+          <p class="featured-kicker">Night Mansion</p>
+          <h3>夜景场景更显厚重</h3>
+          <p>暖光、石材、金属与深色门体组合时，门庭会更具“归家仪式感”，适合独栋住宅、双开大门与高挑门洞条件。</p>
+        </div>
+      </article>
+      <article class="featured-scene featured-scene--light">
+        <div class="featured-scene__content">
+          <p class="featured-kicker">Daylight Facade</p>
+          <h3>日景立面更显纯净</h3>
+          <p>浅色门体在自然光下更突出建筑线条与门把细节，适合简洁外立面、浅灰石材和庭院感更强的住宅入口。</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="featured-note-grid">
+      <article class="featured-note-card">
+        <p class="featured-kicker">Why It Stands Out</p>
+        <h3>为什么值得推荐</h3>
+        <p>新品爆款页以“高辨识门型 + 材质细节 + 落地场景”组织内容，让用户先看到这一批门为什么值得重点推荐。</p>
+        <div class="featured-feature-grid">
+          <div class="featured-feature-card">
+            <span>01</span>
+            <strong>线条成为记忆点</strong>
+            <p>竖向格栅、金属嵌线和几何分缝，让门体远看有秩序，近看有工艺。</p>
+          </div>
+          <div class="featured-feature-card">
+            <span>02</span>
+            <strong>材质层次更完整</strong>
+            <p>黑钛、古铜、香槟金与浅色石材形成对比，适配不同住宅气质。</p>
+          </div>
+          <div class="featured-feature-card">
+            <span>03</span>
+            <strong>场景选择更明确</strong>
+            <p>夜景府邸、日景立面、艺术纹理三种方向，帮助快速判断选型。</p>
+          </div>
+        </div>
+        <div class="featured-point-list">
+          <div class="featured-point">
+            <strong>看点更集中</strong>
+            <p>优先突出最有记忆点的门型，而不是平均分配注意力。</p>
+          </div>
+          <div class="featured-point">
+            <strong>氛围更完整</strong>
+            <p>同时呈现夜景、日景、近景纹理和远景立面，形成对比和层次。</p>
+          </div>
+          <div class="featured-point">
+            <strong>更像选型入口</strong>
+            <p>用户可以先在这里快速判断自己偏向的风格，再进入产品中心继续细看。</p>
+          </div>
+        </div>
+      </article>
+      <article class="featured-material-card">
+        <p class="featured-kicker">Material Palette</p>
+        <h3>热门材质方向</h3>
+        <p>当前爆款门型主要围绕六种视觉语言展开，适合用于后续选型时的风格判断。</p>
+        <div class="featured-material-swatches">
+          <div>深灰铜棕<br>沉稳、克制、府邸感强</div>
+          <div>浅金米白<br>轻盈、干净、日景更突出</div>
+          <div>石墨黑钛<br>现代、利落、线条感明确</div>
+          <div>流纹古铜<br>肌理强、艺术感突出</div>
+          <div>香槟金属<br>精致、明亮、适合豪宅门庭</div>
+          <div>黑金嵌线<br>锋利、大气、细节辨识度高</div>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

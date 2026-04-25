@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MANHART 曼哈特</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260423-21">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand-block" href="index.html" aria-label="MANHART 首页">
+      <span class="brand-mark">M</span>
+      <span class="brand-copy">
+        <span class="brand-cn">曼哈特</span>
+        <span class="brand-en">MANHART</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a class="nav-link is-active" href="index.html">首页</a>
+      <a class="nav-link" href="products.html">产品中心</a>
+      <a class="nav-link" href="service.html">品质服务</a>
+      <a class="nav-link" href="featured.html">新品爆款</a>
+      <a class="nav-link" href="about.html">关于我们</a>
+      <a class="nav-link" href="news.html">企业动态</a>
+      <a class="nav-link nav-link--accent" href="store.html">网上商城</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-slider" aria-label="首页轮播">
+      <article class="hero-slide is-active" data-slide style="--hero-image:url('assets/hero-luxury-night.png');">
+        <div class="hero-slide__image"></div>
+        <div class="hero-slide__shade"></div>
+        <div class="hero-slide__content">
+          <p class="eyebrow">MANHART ESTATE DOOR</p>
+          <h1>MANHART 曼哈特</h1>
+          <p class="hero-slide__title">为高端府邸定制门庭气场</p>
+          <p class="hero-slide__subtitle">Luxury Entrance · Private Order</p>
+        </div>
+      </article>
+      <article class="hero-slide" data-slide style="--hero-image:url('assets/hero-coast-sunrise.png');">
+        <div class="hero-slide__image"></div>
+        <div class="hero-slide__shade"></div>
+        <div class="hero-slide__content">
+          <p class="eyebrow">ARCHITECTURAL AESTHETICS</p>
+          <h2>一门一境</h2>
+          <p class="hero-slide__title">让建筑入口拥有从容秩序</p>
+          <p class="hero-slide__subtitle">Material · Light · Proportion</p>
+        </div>
+      </article>
+      <article class="hero-slide" data-slide style="--hero-image:url('assets/featured-door-bg.png');">
+        <div class="hero-slide__image"></div>
+        <div class="hero-slide__shade"></div>
+        <div class="hero-slide__content">
+          <p class="eyebrow">SELECTED DETAILS</p>
+          <h2>细节见格调</h2>
+          <p class="hero-slide__title">以工艺回应安全与审美</p>
+          <p class="hero-slide__subtitle">Crafted For Distinguished Living</p>
+        </div>
+      </article>
+      <div class="hero-slider__dots" aria-label="轮播切换">
+        <button class="hero-dot is-active" type="button" data-dot aria-label="第 1 张"></button>
+        <button class="hero-dot" type="button" data-dot aria-label="第 2 张"></button>
+        <button class="hero-dot" type="button" data-dot aria-label="第 3 张"></button>
+      </div>
+    </section>
+
+    <section class="featured-showcase" id="featured-showcase">
+      <div class="featured-shell">
+        <div class="featured-backdrop"></div>
+        <div class="featured-overlay"></div>
+        <div class="featured-copy">
+          <p class="eyebrow">Featured Collection</p>
+          <h2>门庭精选</h2>
+          <p class="featured-lead">为不同建筑气质，定制专属入口表达</p>
+        </div>
+        <div class="featured-selector featured-selector--stack" aria-label="门类切换">
+          <div class="featured-selector__label">选择门类</div>
+          <button class="featured-chip is-active" type="button" data-feature-name="armor" data-feature-title="装甲门" data-feature-lead="厚重结构与尊崇尺度" data-feature-text="适合别墅、大宅与高端会所主入口，用深色材质、精密结构和灯光层次建立沉稳气场。" data-feature-model="ARMOR DOOR" data-feature-theme="armor" data-feature-image-main="assets/recommend-02.png">装甲门</button>
+          <button class="featured-chip" type="button" data-feature-name="courtyard" data-feature-title="庭院门" data-feature-lead="让门庭与景观自然衔接" data-feature-text="强调建筑外立面、院落路径与入户尺度的整体关系，让归家动线更有仪式感。" data-feature-model="COURTYARD" data-feature-theme="courtyard" data-feature-image-main="assets/recommend-04.png">庭院门</button>
+          <button class="featured-chip" type="button" data-feature-name="entry" data-feature-title="入户门" data-feature-lead="克制比例中的归家秩序" data-feature-text="面向现代住宅与改善型空间，以细腻门套、温润光影和智能配置平衡美感与安全。" data-feature-model="PRIVATE ENTRY" data-feature-theme="entry" data-feature-image-main="assets/recommend-05.png">入户门</button>
+          <button class="featured-chip" type="button" data-feature-name="system" data-feature-title="系统门" data-feature-lead="结构、五金与安装体验一体化" data-feature-text="把门体、墙面、灯光和门控系统纳入统一设计语言，让产品表达更完整。" data-feature-model="SYSTEM DOOR" data-feature-theme="system" data-feature-image-main="assets/recommend-01.png">系统门</button>
+          <button class="featured-chip" type="button" data-feature-name="smart" data-feature-title="智能锁" data-feature-lead="把安全体验藏进日常细节" data-feature-text="围绕锁控识别、安防联动与门体结构，形成更克制、更可靠的高端智能入口。" data-feature-model="SMART ACCESS" data-feature-theme="smart" data-feature-image-main="assets/recommend-03.png">智能锁</button>
+        </div>
+        <div class="featured-focus">
+          <article class="featured-photo featured-photo--primary" data-feature-door data-theme="armor" style="--feature-image:url('assets/recommend-02.png');">
+            <div class="featured-photo__shade"></div>
+            <div class="featured-photo__meta">
+              <span class="featured-photo__kicker">MANHART SELECT</span>
+              <span class="featured-photo__model" data-feature-model>ARMOR DOOR</span>
+            </div>
+          </article>
+        </div>
+        <div class="featured-panel">
+          <p class="featured-panel__kicker">Current Selection</p>
+          <h3 data-feature-title>装甲门</h3>
+          <p class="featured-panel__lead" data-feature-lead>厚重结构与尊崇尺度</p>
+          <p class="featured-panel__text" data-feature-text>适合别墅、大宅与高端会所主入口，用深色材质、精密结构和灯光层次建立沉稳气场。</p>
+        </div>
+        <div class="featured-note">
+          <span class="featured-note__line"></span>
+          <p>一墅倾城 私享无界</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-preview" id="product-preview">
+      <div class="product-preview__heading">
+        <div>
+          <p class="eyebrow">Hot Style To Recommend</p>
+          <h2>爆款推荐</h2>
+        </div>
+        <p class="product-preview__intro">首页仅保留重点推荐款式，作为品牌印象和热门产品的快速入口。</p>
+      </div>
+      <div class="product-grid product-grid--recommend">
+        <article class="product-card"><div class="product-card__scene product-card__scene--recommend-01"></div><div class="product-card__body"><p class="product-card__series">Private Entry</p><h3>静奢入户</h3><p class="product-card__text">以克制比例营造归家仪式。</p></div></article>
+        <article class="product-card"><div class="product-card__scene product-card__scene--recommend-02"></div><div class="product-card__body"><p class="product-card__series">Signature Door</p><h3>都会立面</h3><p class="product-card__text">深色材质与灯光勾勒门庭秩序。</p></div></article>
+        <article class="product-card"><div class="product-card__scene product-card__scene--recommend-03"></div><div class="product-card__body"><p class="product-card__series">Art Surface</p><h3>艺术肌理</h3><p class="product-card__text">纹理与光影共同塑造空间焦点。</p></div></article>
+        <article class="product-card"><div class="product-card__scene product-card__scene--recommend-04"></div><div class="product-card__body"><p class="product-card__series">Garden Mansion</p><h3>庭院门庭</h3><p class="product-card__text">让建筑入口与景观自然衔接。</p></div></article>
+        <article class="product-card"><div class="product-card__scene product-card__scene--recommend-05"></div><div class="product-card__body"><p class="product-card__series">Smart Classic</p><h3>智能雅门</h3><p class="product-card__text">把安全配置融入经典门型细节。</p></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__brand">
+      <p class="eyebrow">MANHART</p>
+      <h2>曼哈特</h2>
+      <p>智慧装甲门的艺术表达</p>
+    </div>
+    <div class="site-footer__info">
+      <div><h3>联系我们</h3><p>浙江曼哈特安防科技有限公司</p><p>地址：浙江省武义百花山工业区牡丹路 1 号</p><p>电话：0579-87876151 / 87876152</p></div>
+      <div><h3>快速入口</h3><p><a href="products.html">产品中心</a></p><p><a href="about.html">关于我们</a></p><p><a href="news.html">企业动态</a></p></div>
+      <div><h3>网站说明</h3><p>当前为官网首版结构，可继续替换成正式门图、真实型号与企业资料。</p></div>
+    </div>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('[data-slide]');
+    const dots = document.querySelectorAll('[data-dot]');
+    let activeIndex = 0;
+    let sliderTimer;
+    function showSlide(index) {
+      slides.forEach((slide, slideIndex) => slide.classList.toggle('is-active', slideIndex === index));
+      dots.forEach((dot, dotIndex) => dot.classList.toggle('is-active', dotIndex === index));
+      activeIndex = index;
+    }
+    function startSlider() {
+      sliderTimer = window.setInterval(() => showSlide((activeIndex + 1) % slides.length), 4500);
+    }
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        window.clearInterval(sliderTimer);
+        showSlide(index);
+        startSlider();
+      });
+    });
+    showSlide(0);
+    startSlider();
+
+    const featuredShowcase = document.querySelector('.featured-showcase');
+    if (featuredShowcase) {
+      const featureButtons = featuredShowcase.querySelectorAll('[data-feature-name]');
+      const featureModel = featuredShowcase.querySelector('.featured-photo--primary [data-feature-model]');
+      const featureDoor = featuredShowcase.querySelector('[data-feature-door]');
+      const featureTitle = featuredShowcase.querySelector('.featured-panel [data-feature-title]');
+      const featureLead = featuredShowcase.querySelector('.featured-panel [data-feature-lead]');
+      const featureText = featuredShowcase.querySelector('.featured-panel [data-feature-text]');
+
+      function applyFeature(button) {
+        featureModel.textContent = button.dataset.featureModel;
+        featureTitle.textContent = button.dataset.featureTitle;
+        featureLead.textContent = button.dataset.featureLead;
+        featureText.textContent = button.dataset.featureText;
+        featureDoor.style.setProperty('--feature-image', `url('${button.dataset.featureImageMain}')`);
+        featureDoor.setAttribute('data-theme', button.dataset.featureTheme);
+        featureButtons.forEach((item) => item.classList.toggle('is-active', item === button));
+      }
+
+      featureButtons.forEach((button) => {
+        button.addEventListener('mouseenter', () => applyFeature(button));
+        button.addEventListener('focus', () => applyFeature(button));
+        button.addEventListener('click', () => applyFeature(button));
+      });
+    }
+  </script>
+</body>
+</html>
