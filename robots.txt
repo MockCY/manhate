@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://manhate.duckdns.org/sitemap.xml
+Sitemap: http://47.111.172.151/sitemap.xml
