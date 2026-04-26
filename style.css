@@ -8,6 +8,97 @@
   --header-brand-width: 465px;
   --header-height: 104px;
 }
+
+.store-page {
+  min-height: calc(100vh - 84px);
+  padding: 96px 8vw;
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0)),
+    var(--bg);
+}
+
+.store-entry {
+  width: min(1080px, 100%);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 56px;
+  align-items: center;
+  padding: 54px;
+  border: 1px solid rgba(231, 221, 204, 0.12);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.store-entry__content {
+  display: grid;
+  gap: 22px;
+}
+
+.store-entry__content h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2.3rem, 5vw, 4.4rem);
+  font-weight: 600;
+}
+
+.store-entry__content p {
+  width: min(620px, 100%);
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.9;
+}
+
+.store-entry__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.store-entry__meta span {
+  padding: 8px 12px;
+  border: 1px solid rgba(231, 221, 204, 0.14);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.store-entry__link {
+  width: fit-content;
+  padding: 12px 18px;
+  border: 1px solid rgba(201, 161, 100, 0.62);
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 0;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.store-entry__link:hover {
+  background: var(--gold);
+  color: #0b0d10;
+}
+
+.store-entry__qr {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  padding: 28px;
+  background: #f7f5f0;
+  color: #141414;
+}
+
+.store-entry__qr img {
+  width: min(220px, 100%);
+  aspect-ratio: 1;
+  object-fit: contain;
+  display: block;
+}
+
+.store-entry__qr p {
+  margin: 0;
+  color: #333;
+  font-weight: 600;
+}
 * { box-sizing: border-box; }
 html {
   scroll-behavior: smooth;
@@ -2354,4 +2445,15 @@ a { color: inherit; text-decoration: none; }
   .about-timeline__list article { grid-template-columns: 1fr; }
   .about-value__image { grid-column: auto; min-height: 320px; }
   .about-metrics article { min-height: 0; padding: 24px 22px; }
+  .store-page { padding: 46px 20px 70px; }
+  .store-entry {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 24px;
+  }
+  .store-entry__qr {
+    width: 100%;
+    padding: 22px;
+  }
+  .store-entry__qr img { width: min(190px, 100%); }
 }
