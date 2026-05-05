@@ -43,6 +43,7 @@
   </header>
 
   <main class="detail-page">
+    <button class="detail-return" type="button" data-detail-return>返回</button>
     <div class="detail-breadcrumb">
       当前位置：<a href="index.html">首页</a> / <a href="index.html#product-preview">新品爆款</a> / <span data-detail-title-short>静奢入户</span>
     </div>
@@ -168,6 +169,15 @@
     const id = params.get("id") || "private-entry";
     const product = products[id] || products["private-entry"];
     const mainImage = document.querySelector("[data-detail-image]");
+    const returnButton = document.querySelector("[data-detail-return]");
+
+    returnButton.addEventListener("click", () => {
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = "index.html#product-preview";
+      }
+    });
 
     document.querySelectorAll("[data-detail-title]").forEach((item) => item.textContent = product.title);
     document.querySelector("[data-detail-title-short]").textContent = product.title;
