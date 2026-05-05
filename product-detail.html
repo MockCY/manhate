@@ -84,6 +84,24 @@
       <h2 id="related-title">其他产品</h2>
       <div class="detail-related__grid" data-related-products></div>
     </section>
+
+    <section class="detail-story" aria-label="产品设计说明">
+      <article>
+        <span>Design</span>
+        <h2>设计要点</h2>
+        <p data-detail-design>以门体比例、门套尺度和材料秩序建立完整的入户视觉，让门庭成为建筑立面的第一处记忆点。</p>
+      </article>
+      <article>
+        <span>Scene</span>
+        <h2>适用空间</h2>
+        <p data-detail-scene>适合高端住宅、别墅门庭、私宅会所与改善型入户空间，可根据建筑气质调整材质、色系与门型比例。</p>
+      </article>
+      <article>
+        <span>Craft</span>
+        <h2>工艺细节</h2>
+        <p data-detail-craft>强调结构稳定、饰面质感、五金匹配与安装收口，让安全性能和审美表达在日常使用中保持一致。</p>
+      </article>
+    </section>
   </main>
 
   <script>
@@ -93,6 +111,9 @@
         title: "静奢入户",
         param: "深木纹 / 隐框门套 / 智能门锁",
         text: "以克制比例营造归家仪式，让门庭在安静光影中呈现秩序感与高级感。",
+        design: "以大面积深色木纹建立安静气场，门体比例克制，适合强调归家仪式与空间秩序的入户场景。",
+        scene: "适合现代住宅、改善型大平层、私宅入户与高端公寓门厅。",
+        craft: "可结合隐框门套、智能锁位、墙面收口与灯光系统，让门体和室内立面自然衔接。",
         image: "assets/recommend-01.png",
         thumbs: ["assets/recommend-01.png", "assets/entry-door-01.png", "assets/entry-door-02.png", "assets/recommend-05.png"]
       },
@@ -101,6 +122,9 @@
         title: "都会立面",
         param: "深灰金属 / 线性灯带 / 大宅比例",
         text: "深色材质与灯光勾勒门庭秩序，让建筑入口拥有清晰的立面焦点。",
+        design: "通过深灰金属、纵向线条和灯光层次塑造都会感，突出入口立面的挺拔尺度。",
+        scene: "适合别墅主入口、大宅门厅、高端会所和强调建筑立面的项目。",
+        craft: "注重门体结构、金属饰面、灯带预留和门套比例，形成更完整的入口系统。",
         image: "assets/recommend-02.png",
         thumbs: ["assets/recommend-02.png", "assets/armor-door-03.png", "assets/armor-door-04.png", "assets/featured-door-bg.png"]
       },
@@ -109,6 +133,9 @@
         title: "艺术肌理",
         param: "立体纹理 / 艺术饰面 / 光影肌理",
         text: "纹理与光影共同塑造空间焦点，让门面成为具有识别度的视觉作品。",
+        design: "以立体纹理制造视觉流动感，在不同光线下呈现细腻层次。",
+        scene: "适合样板间、艺术住宅、设计型私宅和需要强化门面识别度的空间。",
+        craft: "通过表面肌理、饰面色泽和灯光角度配合，让装饰性与安全门结构并存。",
         image: "assets/recommend-03.png",
         thumbs: ["assets/recommend-03.png", "assets/featured-luxury-01.png", "assets/featured-luxury-03.png", "assets/featured-luxury-05.png"]
       },
@@ -117,6 +144,9 @@
         title: "庭院门庭",
         param: "庭院入口 / 景观衔接 / 户外门庭",
         text: "让建筑入口与景观自然衔接，适合别墅院落和大宅门庭空间。",
+        design: "把门体、檐口、墙面和景观纳入同一视觉关系，让入口更有从容的归家节奏。",
+        scene: "适合庭院住宅、别墅院门、独栋项目和需要与景观融合的建筑入口。",
+        craft: "关注户外耐候、门体尺度、灯光位置和入口动线，提升整体门庭完成度。",
         image: "assets/recommend-04.png",
         thumbs: ["assets/recommend-04.png", "assets/hero-coast-sunrise.png", "assets/entry-door-04.png", "assets/armor-door-05.png"]
       },
@@ -125,6 +155,9 @@
         title: "智能雅门",
         param: "经典门型 / 智能识别 / 安防结构",
         text: "把安全配置融入经典门型细节，兼顾雅致外观与日常使用体验。",
+        design: "在经典门型比例中融入智能锁控，让安全配置不破坏整体门面气质。",
+        scene: "适合城市住宅、改善型入户、精装项目和偏经典审美的门庭空间。",
+        craft: "强调锁体位置、面板比例、门体结构和五金细节的协调，提升日常使用稳定性。",
         image: "assets/recommend-05.png",
         thumbs: ["assets/recommend-05.png", "assets/entry-door-03.png", "assets/entry-door-05.png", "assets/recommend-01.png"]
       }
@@ -141,6 +174,9 @@
     document.querySelector("[data-detail-name]").textContent = product.title;
     document.querySelector("[data-detail-param]").textContent = product.param;
     document.querySelector("[data-detail-text]").textContent = product.text;
+    document.querySelector("[data-detail-design]").textContent = product.design;
+    document.querySelector("[data-detail-scene]").textContent = product.scene;
+    document.querySelector("[data-detail-craft]").textContent = product.craft;
     mainImage.style.backgroundImage = `url("${product.image}")`;
 
     const thumbs = document.querySelector("[data-detail-thumbs]");

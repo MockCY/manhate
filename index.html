@@ -89,29 +89,31 @@
           <h2>门庭精选</h2>
           <p class="featured-lead">为不同建筑气质，定制专属入口表达</p>
         </div>
-        <div class="featured-selector featured-selector--stack" aria-label="门类切换">
+        <div class="featured-selector featured-selector--stack" aria-label="选择门类">
           <div class="featured-selector__label">选择门类</div>
-          <button class="featured-chip is-active" type="button" data-feature-name="armor" data-feature-title="装甲门" data-feature-lead="厚重结构与尊崇尺度" data-feature-text="适合别墅、大宅与高端会所主入口，用深色材质、精密结构和灯光层次建立沉稳气场。" data-feature-model="ARMOR DOOR" data-feature-theme="armor" data-feature-image-main="assets/recommend-02.png">装甲门</button>
-          <button class="featured-chip" type="button" data-feature-name="courtyard" data-feature-title="庭院门" data-feature-lead="让门庭与景观自然衔接" data-feature-text="强调建筑外立面、院落路径与入户尺度的整体关系，让归家动线更有仪式感。" data-feature-model="COURTYARD" data-feature-theme="courtyard" data-feature-image-main="assets/recommend-04.png">庭院门</button>
-          <button class="featured-chip" type="button" data-feature-name="entry" data-feature-title="入户门" data-feature-lead="克制比例中的归家秩序" data-feature-text="面向现代住宅与改善型空间，以细腻门套、温润光影和智能配置平衡美感与安全。" data-feature-model="PRIVATE ENTRY" data-feature-theme="entry" data-feature-image-main="assets/recommend-05.png">入户门</button>
-          <button class="featured-chip" type="button" data-feature-name="system" data-feature-title="系统门" data-feature-lead="结构、五金与安装体验一体化" data-feature-text="把门体、墙面、灯光和门控系统纳入统一设计语言，让产品表达更完整。" data-feature-model="SYSTEM DOOR" data-feature-theme="system" data-feature-image-main="assets/recommend-01.png">系统门</button>
-          <button class="featured-chip" type="button" data-feature-name="smart" data-feature-title="智能锁" data-feature-lead="把安全体验藏进日常细节" data-feature-text="围绕锁控识别、安防联动与门体结构，形成更克制、更可靠的高端智能入口。" data-feature-model="SMART ACCESS" data-feature-theme="smart" data-feature-image-main="assets/recommend-03.png">智能锁</button>
+          <button class="featured-chip is-active" type="button" data-feature-name="armor" data-feature-detail="signature-door" data-feature-title="装甲门" data-feature-lead="厚重结构与尊崇尺度" data-feature-text="适合别墅、大宅与高端会所主入口，用深色材质、精密结构和灯光层次建立沉稳气场。" data-feature-model="ARMOR DOOR" data-feature-theme="armor" data-feature-image-main="assets/recommend-02.png">装甲门</button>
+          <button class="featured-chip" type="button" data-feature-name="courtyard" data-feature-detail="garden-mansion" data-feature-title="庭院门" data-feature-lead="让门庭与景观自然衔接" data-feature-text="强调建筑外立面、院落路径与入户尺度的整体关系，让归家动线更有仪式感。" data-feature-model="COURTYARD" data-feature-theme="courtyard" data-feature-image-main="assets/recommend-04.png">庭院门</button>
+          <button class="featured-chip" type="button" data-feature-name="entry" data-feature-detail="private-entry" data-feature-title="入户门" data-feature-lead="克制比例中的归家秩序" data-feature-text="面向现代住宅与改善型空间，以细腻门套、温润光影和智能配置平衡美感与安全。" data-feature-model="PRIVATE ENTRY" data-feature-theme="entry" data-feature-image-main="assets/recommend-05.png">入户门</button>
+          <button class="featured-chip" type="button" data-feature-name="system" data-feature-detail="art-surface" data-feature-title="系统门" data-feature-lead="结构、五金与安装体验一体化" data-feature-text="把门体、墙面、灯光和门控系统纳入统一设计语言，让产品表达更完整。" data-feature-model="SYSTEM DOOR" data-feature-theme="system" data-feature-image-main="assets/recommend-01.png">系统门</button>
+          <button class="featured-chip" type="button" data-feature-name="smart" data-feature-detail="smart-classic" data-feature-title="智能锁" data-feature-lead="把安全体验藏进日常细节" data-feature-text="围绕锁控识别、安防联动与门体结构，形成更克制、更可靠的高端智能入口。" data-feature-model="SMART ACCESS" data-feature-theme="smart" data-feature-image-main="assets/recommend-03.png">智能锁</button>
         </div>
         <div class="featured-focus">
-          <article class="featured-photo featured-photo--primary" data-feature-door data-theme="armor" style="--feature-image:url('assets/recommend-02.png');">
+          <a class="featured-photo featured-photo--primary" data-feature-door data-feature-link href="product-detail.html?id=signature-door" data-theme="armor" style="--feature-image:url('assets/recommend-02.png');" aria-label="查看装甲门详情">
             <div class="featured-photo__shade"></div>
             <div class="featured-photo__meta">
               <span class="featured-photo__kicker">MANHART SELECT</span>
               <span class="featured-photo__model" data-feature-model>ARMOR DOOR</span>
+              <span class="featured-photo__more">进入详情</span>
             </div>
-          </article>
+          </a>
         </div>
-        <div class="featured-panel">
+        <a class="featured-panel" data-feature-panel-link href="product-detail.html?id=signature-door" aria-label="查看当前精选详情">
           <p class="featured-panel__kicker">Current Selection</p>
           <h3 data-feature-title>装甲门</h3>
           <p class="featured-panel__lead" data-feature-lead>厚重结构与尊崇尺度</p>
           <p class="featured-panel__text" data-feature-text>适合别墅、大宅与高端会所主入口，用深色材质、精密结构和灯光层次建立沉稳气场。</p>
-        </div>
+          <span class="featured-panel__more">进入详情</span>
+        </a>
         <div class="featured-note">
           <span class="featured-note__line"></span>
           <p>一墅倾城 私享无界</p>
@@ -177,6 +179,7 @@
       const featureButtons = featuredShowcase.querySelectorAll('[data-feature-name]');
       const featureModel = featuredShowcase.querySelector('.featured-photo--primary [data-feature-model]');
       const featureDoor = featuredShowcase.querySelector('[data-feature-door]');
+      const featureLinks = featuredShowcase.querySelectorAll('[data-feature-link], [data-feature-panel-link]');
       const featureTitle = featuredShowcase.querySelector('.featured-panel [data-feature-title]');
       const featureLead = featuredShowcase.querySelector('.featured-panel [data-feature-lead]');
       const featureText = featuredShowcase.querySelector('.featured-panel [data-feature-text]');
@@ -188,6 +191,11 @@
         featureText.textContent = button.dataset.featureText;
         featureDoor.style.setProperty('--feature-image', `url('${button.dataset.featureImageMain}')`);
         featureDoor.setAttribute('data-theme', button.dataset.featureTheme);
+        const detailUrl = `product-detail.html?id=${button.dataset.featureDetail}`;
+        featureLinks.forEach((link) => {
+          link.href = detailUrl;
+          link.setAttribute('aria-label', `??${button.dataset.featureTitle}??`);
+        });
         featureButtons.forEach((item) => item.classList.toggle('is-active', item === button));
       }
 
