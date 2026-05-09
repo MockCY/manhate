@@ -9,6 +9,101 @@
   --header-height: 104px;
 }
 
+/* Dify chatbot */
+#dify-chatbot-bubble-button {
+  --dify-chatbot-bubble-button-width: 136px;
+  --dify-chatbot-bubble-button-height: 48px;
+  --dify-chatbot-bubble-button-border-radius: 999px;
+  --dify-chatbot-bubble-button-bg-color: oklch(16% 0.018 76);
+  --dify-chatbot-bubble-button-box-shadow: 0 16px 42px rgba(4, 5, 8, 0.32), inset 0 0 0 1px rgba(220, 180, 112, 0.38);
+  bottom: 30px !important;
+  right: 30px !important;
+  overflow: hidden;
+  background: linear-gradient(135deg, oklch(17% 0.018 76), oklch(11% 0.012 72)) !important;
+  box-shadow: 0 16px 42px rgba(4, 5, 8, 0.32), inset 0 0 0 1px rgba(220, 180, 112, 0.38) !important;
+  color: oklch(84% 0.066 78);
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#dify-chatbot-bubble-button::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 242, 207, 0.08), rgba(255, 242, 207, 0));
+  pointer-events: none;
+}
+
+#dify-chatbot-bubble-button::after {
+  content: "私人顾问";
+  position: absolute;
+  left: 52px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: oklch(86% 0.058 78);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+#dify-chatbot-bubble-button svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 18px;
+}
+
+#dify-chatbot-bubble-button svg path {
+  fill: oklch(87% 0.06 78);
+  stroke: oklch(87% 0.06 78);
+}
+
+#dify-chatbot-bubble-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 48px rgba(4, 5, 8, 0.38), inset 0 0 0 1px rgba(235, 195, 122, 0.56) !important;
+}
+
+#dify-chatbot-bubble-window {
+  width: min(386px, calc(100vw - 40px)) !important;
+  height: min(650px, calc(100vh - 118px)) !important;
+  right: 30px !important;
+  bottom: 92px !important;
+  border-radius: 18px !important;
+  border: 1px solid rgba(218, 180, 113, 0.34) !important;
+  box-shadow: 0 28px 76px rgba(3, 5, 9, 0.42), 0 0 0 1px rgba(255, 248, 230, 0.05) !important;
+  background: oklch(96% 0.009 80) !important;
+  outline: 5px solid rgba(8, 12, 18, 0.42);
+}
+
+@media (max-width: 640px) {
+  #dify-chatbot-bubble-button {
+    --dify-chatbot-bubble-button-width: 126px;
+    --dify-chatbot-bubble-button-height: 46px;
+    right: 16px !important;
+    bottom: 18px !important;
+  }
+
+  #dify-chatbot-bubble-button::after {
+    left: 48px;
+    font-size: 13px;
+  }
+
+  #dify-chatbot-bubble-button svg {
+    margin-left: 16px;
+  }
+
+  #dify-chatbot-bubble-window {
+    width: calc(100vw - 28px) !important;
+    height: min(604px, calc(100vh - 94px)) !important;
+    left: 14px !important;
+    right: auto !important;
+    bottom: 78px !important;
+    border-radius: 14px !important;
+    outline-width: 4px;
+  }
+}
+
 .store-page {
   min-height: calc(100vh - 84px);
   padding: 96px 8vw;
