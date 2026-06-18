@@ -1,4 +1,7 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: http://47.111.172.151/sitemap.xml
+User-agent: Baiduspider
+Allow: /
+
+Sitemap: https://manhart.top/sitemap.xml
