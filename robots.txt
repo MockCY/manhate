@@ -4,4 +4,4 @@ Allow: /
 User-agent: Baiduspider
 Allow: /
 
-Sitemap: https://manhart.top/sitemap.xml
+Sitemap: http://www.manhart.top/sitemap.xml

@@ -2,18 +2,18 @@
 
 ## 先处理最关键的问题
 
-1. 确认正式域名 `https://manhart.top` 可以稳定访问，并让 IP 地址、`http://manhart.top`、`www.manhart.top` 统一 301 跳转到这个地址。
+1. 确认正式域名 `http://www.manhart.top` 可以稳定访问，并让 IP 地址、`http://manhart.top`、`www.manhart.top` 统一 301 跳转到这个地址。
 2. 确认服务器可以公网访问 `robots.txt` 和 `sitemap.xml`。
 3. 登录百度搜索资源平台，添加并验证站点。
 4. 在普通收录里提交首页和 sitemap，优先提交：
-   - `https://manhart.top/`
-   - `https://manhart.top/products.html`
-   - `https://manhart.top/about.html`
-   - `https://manhart.top/service.html`
-   - `https://manhart.top/featured.html`
-   - `https://manhart.top/news.html`
-   - `https://manhart.top/store.html`
-   - `https://manhart.top/product-detail.html`
+   - `http://www.manhart.top/`
+   - `http://www.manhart.top/products.html`
+   - `http://www.manhart.top/about.html`
+   - `http://www.manhart.top/service.html`
+   - `http://www.manhart.top/featured.html`
+   - `http://www.manhart.top/news.html`
+   - `http://www.manhart.top/store.html`
+   - `http://www.manhart.top/product-detail.html`
 5. 申请 ICP 备案并在页脚展示备案号。国内搜索引擎对企业官网的信任判断会明显受域名、备案、品牌一致性影响。
 
 ## 已在代码里补强的项目
